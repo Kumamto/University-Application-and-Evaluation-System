@@ -1,0 +1,115 @@
+.u-section-1 .u-sheet-1 {
+  min-height: 824px;
+}
+
+fieldset {
+  padding: 10px;
+  height: 96px;
+  width: 570px;
+  margin: 20px auto 40px;
+}
+
+.submit{
+  letter-spacing: 1px;
+  height: 96px;
+  border-style: none;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+form{
+    height: 156px;
+    width: 570px;
+    margin: 11px auto 60px;
+}
+.Note {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 306px auto 0 380px;
+}
+
+.u-section-1 .u-text-2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 125px auto 0 279px;
+}
+
+.u-section-1 .u-form-1 {
+  height: 68px;
+  margin: 91px 81px 60px 489px;
+}
+
+.u-section-1 .u-btn-1 {
+  border-style: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-image: none;
+}
+
+.u-block-ff64-16 {
+  font-weight: 700;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-text-2 {
+    margin-top: 211px;
+  }
+
+  .u-section-1 .u-form-1 {
+    width: 570px;
+    margin-top: 255px;
+    margin-right: 0;
+    margin-left: 370px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-1 .u-text-1 {
+    margin-top: 272px;
+    margin-left: 101px;
+  }
+
+  .u-section-1 .u-text-2 {
+    margin-left: 214px;
+  }
+
+  .u-section-1 .u-form-1 {
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-text-1 {
+    margin-left: 47px;
+  }
+
+  .u-section-1 .u-text-2 {
+    margin-top: 263px;
+    margin-left: 161px;
+  }
+
+  .u-section-1 .u-form-1 {
+    width: 540px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-text-1 {
+    margin-left: -53px;
+  }
+
+  .u-section-1 .u-text-2 {
+    margin-top: 289px;
+    margin-left: 101px;
+  }
+
+  .u-section-1 .u-form-1 {
+    width: 340px;
+    margin-top: 252px;
+    margin-bottom: 47px;
+  }
+}
