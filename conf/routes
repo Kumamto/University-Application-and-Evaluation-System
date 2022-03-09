@@ -1,0 +1,37 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# https://www.playframework.com/documentation/latest/ScalaRouting
+# ~~~~
+
+# Showing The Home Page
+GET     /                                                   controllers.HomeController.home()
+
+# Direction To Seperate Modules On the Home Page
+GET     /dashboard                                          controllers.HomeController.Dashboard()
+GET     /judgement                                          controllers.ApplicationController.Judgement()
+GET     /evaluation                                         controllers.ApplicationController.all()
+
+# Direction To Different Modules On the Home Page
+GET     /dashboard/1                                        controllers.ApplicationController.result1()
+GET     /dashboard/2%22                                     controllers.ApplicationController.result2()
+GET     /dashboard/3%22                                     controllers.ApplicationController.result3()
+GET     /dashboard/4%22                                     controllers.ApplicationController.result4()
+GET     /dashboard/5%22                                     controllers.ApplicationController.result5()
+
+# Direction To Applicant's detail
+GET     /evaluation/detail/:appNumber                       controllers.ApplicationController.detail(appNumber:Int)
+
+# Set Applicant's priority
+GET     /evaluation/detail/:appNumber/priority              controllers.ApplicationController.edit(appNumber:Int)
+
+# Return The List of Updated Information
+POST     /evaluation                                        controllers.ApplicationController.update(appNumber:Int)
+
+# Direction To Three Different Bnading Method Reuslt Page
+GET     /judgement/1                                        controllers.ApplicationController.judge1()
+GET     /judgement/2                                        controllers.ApplicationController.judge2()
+GET     /judgement/DIY                                      controllers.ApplicationController.diyJudge()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file                                       controllers.Assets.at(path="/public", file)
+
