@@ -1,0 +1,23 @@
+@import dao.Index
+@(appNumber:Int, indexForm:Form[Index])(implicit request: RequestHeader, messagesProvider: MessagesProvider)
+@import helper._
+@implicitFieldConstructor = @{ FieldConstructor(twitterBootstrapInput.f) }
+
+@priority{
+    <h3 class = "Note">Set Process Priority For Applicant @appNumber</h3>
+    @form(routes.ApplicationController.update(appNumber)){
+        <fieldset>
+        @select(
+            field = indexForm("priority"),
+            options = Seq("0" -> "0","1" -> "1","2" -> "2","3" -> "3","4" -> "4","5" -> "5"),
+            Symbol("_default") -> "-- Choose a Process Priority --",
+            Symbol("_showConstraints") -> false
+        )
+        </fieldset>
+
+        <div class="actions">
+            <a class = "submit" href="@routes.ApplicationController.update(appNumber)">Submit</a>
+        </div>
+
+}
+}

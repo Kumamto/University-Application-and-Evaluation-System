@@ -1,0 +1,39 @@
+@import dao.Applicant
+@(applicantForm: Form[Applicant], applicants: Seq[Applicant])(implicit request: play.api.mvc.RequestHeader)
+@import helper._
+
+@listhelper{
+    <tbody>
+
+    @applicants.map {
+    case applicant => {
+    <tr>
+        <td>
+            <a href="@routes.ApplicationController.detail(applicant.appNumber)">
+                @applicant.appNumber
+            </a>
+        </td>
+
+        <td>
+            @applicant.name
+        </td>
+
+        <td>
+            @applicant.university
+        </td>
+
+        <td>
+            @applicant.cap
+        </td>
+
+        <td>
+            @applicant.priority
+        </td>
+    </tr>
+    }
+    }
+
+    </tbody>
+
+    </table>
+}

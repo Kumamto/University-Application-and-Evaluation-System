@@ -1,0 +1,22 @@
+@import dao.Index
+@(indexForm:Form[Index])(implicit request: RequestHeader, messagesProvider: MessagesProvider)
+@import helper._
+@implicitFieldConstructor = @{ FieldConstructor(twitterBootstrapInput.f) }
+
+@band{
+    @form(routes.ApplicationController.diyJudge){
+
+        <fieldset>
+
+            @inputText(indexForm("number"), Symbol("_label") -> "Please Input Your Preferred Percentage For Degree Information")
+
+        </fieldset>
+
+        <div class="actions">
+
+            <input type="submit" value="Submit" class="btn primary">
+
+        </div>
+
+}
+}

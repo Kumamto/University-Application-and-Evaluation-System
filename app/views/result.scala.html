@@ -1,0 +1,137 @@
+@import dao.Applicant
+@(applicants:Seq[Applicant])
+
+
+@detail{
+
+    <div class="wrap">
+        <div class="table_wrap">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td class="table_title">
+                            <p>Applicant Number</p>
+                        </td>
+
+                        <td class="table_content">
+                            <p>@applicants.map {
+                                case applicant => {@applicant.appNumber}}
+                            </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="table_title">
+                            <p>Name</p>
+                        </td>
+
+                        <td class="table_content">
+                            <p>@applicants.map {
+                                case applicant => {@applicant.name}}
+                            </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="table_title">
+                            <p>University</p>
+                        </td>
+
+                        <td class="table_content">
+                            <p>@applicants.map {
+                                case applicant => {@applicant.university}}
+                            </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="table_title">
+                            <p>University Ranking</p>
+                        </td>
+
+                        <td class="table_content">
+                            <p>@applicants.map {
+                                case applicant => {@applicant.ranking}}
+                            </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="table_title">
+                            <p>Specialization</p>
+                        </td>
+
+                        <td class="table_content">
+                            <p>@applicants.map {
+                                case applicant => {@applicant.specialization}}
+                            </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="table_title">
+                            <p>Cap</p>
+                        </td>
+
+                        <td class="table_content">
+                            <p>@applicants.map {
+                                case applicant => {@applicant.cap}}
+                            </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="table_title">
+                            <p>Cap Scale</p>
+                        </td>
+
+                        <td class="table_content">
+                            <p>@applicants.map {
+                                case applicant => {@applicant.cap_scale}}
+                            </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="table_title">
+                            <p>IELTS Score</p>
+                        </td>
+
+                        <td class="table_content">
+                            <p>@applicants.map {
+                                case applicant => {@applicant.ielts_overall}}
+                            </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="table_title">
+                            <p>TOEFL Score</p>
+                        </td>
+
+                        <td class="table_content">
+                            <p>@applicants.map {
+                                case applicant => {@applicant.toefl_total}}
+                            </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="table_title">
+                            <p>Priority</p>
+                        </td>
+
+                        <td class="table_content">
+                            <p>@applicants.map {
+                                case applicant => {
+                                <a href="@routes.ApplicationController.edit(applicant.appNumber)">@applicant.priority</a>
+                                }
+                                }
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+}

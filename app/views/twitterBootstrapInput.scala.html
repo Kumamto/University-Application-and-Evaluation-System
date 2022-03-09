@@ -1,0 +1,11 @@
+@(elements: helper.FieldElements)
+
+@**************************************************
+* Generate input according twitter bootstrap rules *
+**************************************************@
+<div class="clearfix @if(elements.hasErrors) {error}">
+    <label for="@elements.id">@elements.label</label>
+    <div class="input">
+        @elements.input
+    </div>
+</div>
